@@ -1,0 +1,85 @@
+// LAPTOPS
+@media screen and (min-width: 1200px) {
+}
+
+// TABLETS
+@media screen and (max-width: 1199px) {
+}
+
+// PHONES
+@media screen and (max-width: 767px) {
+  #all-tasks {
+    .header {
+      .top {
+        .add-circle {
+          background: black;
+          border-radius: 50%;
+          position: absolute;
+          right: 25px;
+          top: 153px;
+          padding: 10px;
+          cursor: pointer;
+        }
+
+        .tasks-total {
+          top: 0;
+          .task {
+            display: block;
+            .number {
+              color: #ffbf3e;
+              font-weight: 300;
+              font-size: 45px;
+              margin: 0 10px 0 10px;
+              position: relative;
+              top: 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// EXTRA SMALL PHONES
+@media screen and (max-width: 420px) {
+  #all-tasks {
+    .header {
+      .top {
+        padding-top: 45px;
+        text-align: center;
+        .add-circle {
+          background: black;
+          border-radius: 50%;
+          position: absolute;
+          right: 25px;
+          top: 148px;
+          padding: 10px;
+          cursor: pointer;
+        }
+
+        .logo {
+          float: none;
+          text-align: center;
+        }
+
+        .tasks-total {
+          //   top: 0;
+          //   margin: 0 auto;
+          .task {
+            display: inline-block;
+            padding-top: 10px;
+            // text-align: center;
+            .number {
+              color: #ffbf3e;
+              font-weight: 300;
+              font-size: 40px;
+              margin: 0 10px 0 10px;
+              position: relative;
+              top: 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

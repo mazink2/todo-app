@@ -32,7 +32,7 @@
 
           .number {
             color: $yellow;
-            font-weight: 100;
+            font-weight: 300;
             font-size: 60px;
             margin: 0 10px 0 10px;
             position: relative;
@@ -57,10 +57,11 @@
   }
 
   .content-area {
-    color: red;
+    // color: red;
     width: 100%;
     // height: 90%;
     overflow: auto;
+    // background-color: black;
 
     .tasks-container {
       margin: 40px 0;
@@ -100,6 +101,7 @@
 
   .task-form {
     background: $darkBlue;
+    opacity: 0.98;
     position: absolute;
     z-index: 100;
     top: 0;

@@ -192,7 +192,7 @@ body {
           display: inline-block; }
           #all-tasks .header .top .tasks-total .task .number {
             color: #ffbf3e;
-            font-weight: 100;
+            font-weight: 300;
             font-size: 60px;
             margin: 0 10px 0 10px;
             position: relative;
@@ -209,7 +209,6 @@ body {
           color: #ffbf3e;
           font-size: 50px; }
   #all-tasks .content-area {
-    color: red;
     width: 100%;
     overflow: auto; }
     #all-tasks .content-area .tasks-container {
@@ -239,6 +238,7 @@ body {
           color: #3a4793; }
   #all-tasks .task-form {
     background: #3a4793;
+    opacity: 0.98;
     position: absolute;
     z-index: 100;
     top: 0;
@@ -317,3 +317,50 @@ body {
   .btn.lightBlue {
     font-size: 25px;
     background: #25b3ec; }
+
+@media screen and (max-width: 767px) {
+  #all-tasks .header .top .add-circle {
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    right: 25px;
+    top: 153px;
+    padding: 10px;
+    cursor: pointer; }
+  #all-tasks .header .top .tasks-total {
+    top: 0; }
+    #all-tasks .header .top .tasks-total .task {
+      display: block; }
+      #all-tasks .header .top .tasks-total .task .number {
+        color: #ffbf3e;
+        font-weight: 300;
+        font-size: 45px;
+        margin: 0 10px 0 10px;
+        position: relative;
+        top: 3px; } }
+
+@media screen and (max-width: 420px) {
+  #all-tasks .header .top {
+    padding-top: 45px;
+    text-align: center; }
+    #all-tasks .header .top .add-circle {
+      background: black;
+      border-radius: 50%;
+      position: absolute;
+      right: 25px;
+      top: 148px;
+      padding: 10px;
+      cursor: pointer; }
+    #all-tasks .header .top .logo {
+      float: none;
+      text-align: center; }
+    #all-tasks .header .top .tasks-total .task {
+      display: inline-block;
+      padding-top: 10px; }
+      #all-tasks .header .top .tasks-total .task .number {
+        color: #ffbf3e;
+        font-weight: 300;
+        font-size: 40px;
+        margin: 0 10px 0 10px;
+        position: relative;
+        top: 3px; } }
