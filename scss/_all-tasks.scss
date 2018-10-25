@@ -1,0 +1,185 @@
+@import "colors";
+
+#all-tasks {
+  .header {
+    background: url("../img/mountains.jpg") center 60%;
+    background-repeat: no-repeat;
+    width: 100%;
+    // height: 300px;
+    background-size: cover;
+    color: white;
+
+    .top {
+      background: rgba(58, 71, 147, 0.6);
+      padding: 50px 15px;
+      text-align: right;
+
+      .logo {
+        font-family: "Comfortaa", cursive;
+        font-size: 36px;
+        float: left;
+      }
+
+      .tasks-total {
+        position: relative;
+        top: -20px;
+
+        .task {
+          display: inline-block;
+
+          .number {
+            color: $yellow;
+            font-weight: 100;
+            font-size: 60px;
+            margin: 0 10px 0 10px;
+            position: relative;
+            top: 10px;
+          }
+        }
+      }
+      .add-circle {
+        background: black;
+        border-radius: 50%;
+        position: absolute;
+        right: 25px;
+        top: 125px;
+        padding: 10px;
+        .fas {
+          color: $yellow;
+          font-size: 50px;
+        }
+      }
+    }
+  }
+
+  .content-area {
+    width: 100%;
+    .tasks-container {
+      margin: 40px 0;
+
+      .task-box {
+        padding: 20px;
+        border-bottom: 2px solid #d1d1d1;
+        margin: 0 0 20px 0;
+        background: $white;
+        position: relative;
+
+        .title {
+          color: black;
+          font-size: 24px;
+        }
+
+        .date {
+          color: #ababab;
+          font-size: 14px;
+          margin-top: 15px;
+        }
+
+        .check-box {
+          padding: 5px;
+          border-radius: 10px;
+          border: 3px solid $darkBlue;
+          display: inline-block;
+          position: absolute;
+          top: 21px;
+          right: 25px;
+          font-size: 32px;
+          color: $darkBlue;
+        }
+      }
+    }
+  }
+
+  .task-form {
+    background: $darkBlue;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    color: $white;
+    padding: 50px 0;
+    transform: translateY(100%);
+    transition: all 0.6s ease-in-out;
+
+    &.active {
+      transform: translateY(0);
+    }
+
+    .close-btn {
+      position: absolute;
+      right: 35px;
+      top: 35px;
+      cursor: pointer;
+      padding: 15px;
+
+      .fas {
+        font-size: 36px;
+      }
+    }
+
+    h3 {
+      margin: 50px 0;
+      font-size: 36px;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: block;
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 15px;
+    }
+
+    label {
+      display: block;
+      text-transform: capitalize;
+      font-family: "Roboto", cursive;
+      font-weight: 300;
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      background: rgba(255, 255, 155, 0.1);
+      border: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+      font-family: "Roboto", cursive;
+      font-weight: 300;
+      font-size: 36px;
+      color: $white;
+      &:focus {
+        border: none;
+        outline: none;
+      }
+    }
+
+    textarea {
+      height: 250px;
+      resize: vertical;
+    }
+
+    button {
+      background: $lightBlue;
+      padding: 15px 20px;
+      width: 100%;
+      border: none;
+      font-size: 16px;
+      text-transform: uppercase;
+      color: $white;
+    }
+  }
+}
+
+.container {
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
