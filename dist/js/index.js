@@ -1,5 +1,9 @@
 $(document).ready(function() {
   $(".add-circle").on("click", function() {
-    console.log("show me the popup");
+    $(".task-form").addClass("active");
+  });
+
+  $(".task-form .close-btn").on("click", function() {
+    $(".task-form").removeClass("active");
   });
 });

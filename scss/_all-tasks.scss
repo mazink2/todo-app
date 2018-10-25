@@ -1,6 +1,8 @@
 @import "colors";
 
 #all-tasks {
+  height: 100%;
+  overflow: auto;
   .header {
     background: url("../img/mountains.jpg") center 60%;
     background-repeat: no-repeat;
@@ -13,6 +15,7 @@
       background: rgba(58, 71, 147, 0.6);
       padding: 50px 15px;
       text-align: right;
+      position: relative;
 
       .logo {
         font-family: "Comfortaa", cursive;
@@ -44,6 +47,7 @@
         right: 25px;
         top: 125px;
         padding: 10px;
+        cursor: pointer;
         .fas {
           color: $yellow;
           font-size: 50px;
@@ -53,7 +57,11 @@
   }
 
   .content-area {
+    color: red;
     width: 100%;
+    // height: 90%;
+    overflow: auto;
+
     .tasks-container {
       margin: 40px 0;
 
@@ -182,4 +190,5 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 15px;
 }

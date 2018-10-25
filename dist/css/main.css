@@ -144,7 +144,8 @@ div {
 html,
 body {
   background: #ededed;
-  height: 100%; }
+  height: 100%;
+  overflow: hidden; }
 
 #home {
   background: url("../img/mountains.jpg") center center;
@@ -166,141 +167,147 @@ body {
       font-weight: 100;
       color: #fff; }
 
-#all-tasks .header {
-  background: url("../img/mountains.jpg") center 60%;
-  background-repeat: no-repeat;
-  width: 100%;
-  background-size: cover;
-  color: white; }
-  #all-tasks .header .top {
-    background: rgba(58, 71, 147, 0.6);
-    padding: 50px 15px;
-    text-align: right; }
-    #all-tasks .header .top .logo {
-      font-family: "Comfortaa", cursive;
-      font-size: 36px;
-      float: left; }
-    #all-tasks .header .top .tasks-total {
-      position: relative;
-      top: -20px; }
-      #all-tasks .header .top .tasks-total .task {
-        display: inline-block; }
-        #all-tasks .header .top .tasks-total .task .number {
-          color: #ffbf3e;
-          font-weight: 100;
-          font-size: 60px;
-          margin: 0 10px 0 10px;
-          position: relative;
-          top: 10px; }
-    #all-tasks .header .top .add-circle {
-      background: black;
-      border-radius: 50%;
-      position: absolute;
-      right: 25px;
-      top: 125px;
-      padding: 10px; }
-      #all-tasks .header .top .add-circle .fas {
-        color: #ffbf3e;
-        font-size: 50px; }
-
-#all-tasks .content-area {
-  width: 100%; }
-  #all-tasks .content-area .tasks-container {
-    margin: 40px 0; }
-    #all-tasks .content-area .tasks-container .task-box {
-      padding: 20px;
-      border-bottom: 2px solid #d1d1d1;
-      margin: 0 0 20px 0;
-      background: #fff;
+#all-tasks {
+  height: 100%;
+  overflow: auto; }
+  #all-tasks .header {
+    background: url("../img/mountains.jpg") center 60%;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    color: white; }
+    #all-tasks .header .top {
+      background: rgba(58, 71, 147, 0.6);
+      padding: 50px 15px;
+      text-align: right;
       position: relative; }
-      #all-tasks .content-area .tasks-container .task-box .title {
-        color: black;
-        font-size: 24px; }
-      #all-tasks .content-area .tasks-container .task-box .date {
-        color: #ababab;
-        font-size: 14px;
-        margin-top: 15px; }
-      #all-tasks .content-area .tasks-container .task-box .check-box {
-        padding: 5px;
-        border-radius: 10px;
-        border: 3px solid #3a4793;
-        display: inline-block;
+      #all-tasks .header .top .logo {
+        font-family: "Comfortaa", cursive;
+        font-size: 36px;
+        float: left; }
+      #all-tasks .header .top .tasks-total {
+        position: relative;
+        top: -20px; }
+        #all-tasks .header .top .tasks-total .task {
+          display: inline-block; }
+          #all-tasks .header .top .tasks-total .task .number {
+            color: #ffbf3e;
+            font-weight: 100;
+            font-size: 60px;
+            margin: 0 10px 0 10px;
+            position: relative;
+            top: 10px; }
+      #all-tasks .header .top .add-circle {
+        background: black;
+        border-radius: 50%;
         position: absolute;
-        top: 21px;
         right: 25px;
-        font-size: 32px;
-        color: #3a4793; }
-
-#all-tasks .task-form {
-  background: #3a4793;
-  position: absolute;
-  z-index: 100;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  color: #fff;
-  padding: 50px 0;
-  transform: translateY(100%);
-  transition: all 0.6s ease-in-out; }
-  #all-tasks .task-form.active {
-    transform: translateY(0); }
-  #all-tasks .task-form .close-btn {
+        top: 125px;
+        padding: 10px;
+        cursor: pointer; }
+        #all-tasks .header .top .add-circle .fas {
+          color: #ffbf3e;
+          font-size: 50px; }
+  #all-tasks .content-area {
+    color: red;
+    width: 100%;
+    overflow: auto; }
+    #all-tasks .content-area .tasks-container {
+      margin: 40px 0; }
+      #all-tasks .content-area .tasks-container .task-box {
+        padding: 20px;
+        border-bottom: 2px solid #d1d1d1;
+        margin: 0 0 20px 0;
+        background: #fff;
+        position: relative; }
+        #all-tasks .content-area .tasks-container .task-box .title {
+          color: black;
+          font-size: 24px; }
+        #all-tasks .content-area .tasks-container .task-box .date {
+          color: #ababab;
+          font-size: 14px;
+          margin-top: 15px; }
+        #all-tasks .content-area .tasks-container .task-box .check-box {
+          padding: 5px;
+          border-radius: 10px;
+          border: 3px solid #3a4793;
+          display: inline-block;
+          position: absolute;
+          top: 21px;
+          right: 25px;
+          font-size: 32px;
+          color: #3a4793; }
+  #all-tasks .task-form {
+    background: #3a4793;
     position: absolute;
-    right: 35px;
-    top: 35px;
-    cursor: pointer;
-    padding: 15px; }
-    #all-tasks .task-form .close-btn .fas {
-      font-size: 36px; }
-  #all-tasks .task-form h3 {
-    margin: 50px 0;
-    font-size: 36px;
-    text-align: center; }
-  #all-tasks .task-form .form-group {
-    margin-bottom: 20px; }
-  #all-tasks .task-form form {
-    display: block;
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 15px; }
-  #all-tasks .task-form label {
-    display: block;
-    text-transform: capitalize;
-    font-family: "Roboto", cursive;
-    font-weight: 300;
-    font-size: 36px;
-    margin-bottom: 15px; }
-  #all-tasks .task-form input[type="text"],
-  #all-tasks .task-form textarea {
+    z-index: 100;
+    top: 0;
+    bottom: 0;
     width: 100%;
-    background: rgba(255, 255, 155, 0.1);
-    border: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
-    font-family: "Roboto", cursive;
-    font-weight: 300;
-    font-size: 36px;
-    color: #fff; }
-    #all-tasks .task-form input[type="text"]:focus,
-    #all-tasks .task-form textarea:focus {
+    color: #fff;
+    padding: 50px 0;
+    transform: translateY(100%);
+    transition: all 0.6s ease-in-out; }
+    #all-tasks .task-form.active {
+      transform: translateY(0); }
+    #all-tasks .task-form .close-btn {
+      position: absolute;
+      right: 35px;
+      top: 35px;
+      cursor: pointer;
+      padding: 15px; }
+      #all-tasks .task-form .close-btn .fas {
+        font-size: 36px; }
+    #all-tasks .task-form h3 {
+      margin: 50px 0;
+      font-size: 36px;
+      text-align: center; }
+    #all-tasks .task-form .form-group {
+      margin-bottom: 20px; }
+    #all-tasks .task-form form {
+      display: block;
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 15px; }
+    #all-tasks .task-form label {
+      display: block;
+      text-transform: capitalize;
+      font-family: "Roboto", cursive;
+      font-weight: 300;
+      font-size: 36px;
+      margin-bottom: 15px; }
+    #all-tasks .task-form input[type="text"],
+    #all-tasks .task-form textarea {
+      width: 100%;
+      background: rgba(255, 255, 155, 0.1);
       border: none;
-      outline: none; }
-  #all-tasks .task-form textarea {
-    height: 250px;
-    resize: vertical; }
-  #all-tasks .task-form button {
-    background: #25b3ec;
-    padding: 15px 20px;
-    width: 100%;
-    border: none;
-    font-size: 16px;
-    text-transform: uppercase;
-    color: #fff; }
+      border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+      font-family: "Roboto", cursive;
+      font-weight: 300;
+      font-size: 36px;
+      color: #fff; }
+      #all-tasks .task-form input[type="text"]:focus,
+      #all-tasks .task-form textarea:focus {
+        border: none;
+        outline: none; }
+    #all-tasks .task-form textarea {
+      height: 250px;
+      resize: vertical; }
+    #all-tasks .task-form button {
+      background: #25b3ec;
+      padding: 15px 20px;
+      width: 100%;
+      border: none;
+      font-size: 16px;
+      text-transform: uppercase;
+      color: #fff; }
 
 .container {
   display: block;
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0 15px; }
 
 .btn {
   width: 100%;
